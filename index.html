@@ -8,6 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="//oss.maxcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,15 +18,6 @@
     <![endif]-->
   </head>
   <body ng-app="akushApp">
-  <style type="text/css">
-	body {
-	  padding-top: 50px;
-	}
-	.starter-template {
-	  /*padding: 40px 15px;
-	  text-align: center;*/
-	}
-  </style>
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -48,15 +40,14 @@
     </div>
 
     <div class="container">
-
-      <!-- <div>
-        <h1>Abhinav Kushwaha</h1>
-        <p class="lead">I am working at Citrix R&amp;D India as Software Development Engineer. Graduated from IIT (BHU), Varanasi.</p>
-      </div> -->
-
       <div ng-view></div>
-
     </div><!-- /.container -->
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">&copy;2014 Abhinav Kushwaha</p>
+      </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
