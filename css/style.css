@@ -25,6 +25,10 @@ body > .container {
   padding-left: 15px;
 }
 
+#footer > .container p {
+	margin: 20px 0;
+}
+
 code {
   font-size: 80%;
 }
