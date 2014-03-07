@@ -7,7 +7,7 @@ akushApp.config(['$routeProvider',
       when('/', {
         templateUrl: 'home.html',
         controller: 'HomeController'
-    }).
+      }).
       when('/github', {
         templateUrl: 'github.html',
         controller: 'GithubController'
@@ -19,14 +19,14 @@ akushApp.config(['$routeProvider',
  
  
 akushApp.controller('HomeController', function($scope) {
-     
+  markActiveHeader('home');
   $scope.message = 'I am working at Citrix R&D India as Software Development Engineer. Graduated from IIT (BHU), Varanasi.';
-     
 });
  
  
 akushApp.controller('GithubController', function($scope, $http) {
 
+  markActiveHeader('github');
   $scope.message = 'This is tasks screen';
   $scope.userNotFound = false;
   $scope.loaded = false;
@@ -46,3 +46,8 @@ akushApp.controller('GithubController', function($scope, $http) {
   });
  
 });
+
+function markActiveHeader($cls){
+  $('#nav-list li').removeClass('active');
+  $('#nav-list li.'+$cls).addClass('active');
+}
