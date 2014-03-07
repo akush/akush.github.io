@@ -20,7 +20,7 @@ akushApp.config(['$routeProvider',
  
 akushApp.controller('HomeController', function($scope) {
      
-  $scope.message = 'This is home screen';
+  $scope.message = 'I am working at Citrix R&D India as Software Development Engineer. Graduated from IIT (BHU), Varanasi.';
      
 });
  
