@@ -18,7 +18,7 @@ define(function () {
         el.innerHTML =
             '<a href="#" class="btn btn-sm btn-danger pull-right" title="delete list"><span class="glyphicon glyphicon-trash"></span></a>\
             <a href="#" class="btn btn-sm btn-primary pull-right" title="add task"><span class="glyphicon glyphicon-plus"></span></a>\
-            <div class="title"><input type="text" value="'+title+'" autofocus placeholder="List title"></div>' ;
+            <div class="title"><input type="text" value="'+title+'" placeholder="List title"></div>' ;
         return el;
 
     }
