@@ -64,10 +64,8 @@ textarea {
 .list .item textarea {
     height: auto;
 }
-.done input,
+.done input[type=text],
 .done textarea {
-    width: 100%;
-    background: none;
     text-decoration: line-through;
 }
 .footer {
