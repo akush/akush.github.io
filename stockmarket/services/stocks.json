@@ -1,0 +1,16 @@
+{
+    "stocks": [
+        {
+            "name": "Abhinav Pvt Ltd",
+            "code": "ABHI",
+            "yesterday":150,
+            "today": 211
+        },
+        {
+            "name": "Zlemma",
+            "code": "ZLMM",
+            "yesterday":234,
+            "today": 236
+        }
+    ]
+}

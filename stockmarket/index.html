@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>Stock Market</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.darkly.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Stock Market</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="container" style="padding: 0 15px;display:none;">
+            <table class="table table-condensed table-hover table-striped">
+                <thead>
+                    <tr>
+                        <td class="serial">#</td>
+                        <td class="name">Company Name</td>
+                        <td class="code">Company Code</td>
+                        <td class="yest">Yesterday's price</td>
+                        <td class="price">Today's price</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="serial">1</td>
+                        <td class="name">ABC Ltd</td>
+                        <td class="code">ABCL</td>
+                        <td class="yest">1233</td>
+                        <td class="price">43242</td>
+                    </tr>
+                    <tr>
+                        <td class="serial">2</td>
+                        <td class="name">ABC Ltd</td>
+                        <td class="code">ABCL</td>
+                        <td class="yest">1233</td>
+                        <td class="price">43242</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row" id="login" style="display:none;">
+            <div class="well col-lg-4 col-lg-offset-4">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <legend>Login</legend>
+                        <div class="form-group">
+                            <label for="inputUsername" class="col-lg-4 control-label">Username</label>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-4 control-label">Password</label>
+                            <div class="col-lg-8">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id='inputRememberme' checked>Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-8 col-lg-offset-4">
+                                <button type="button" id='loginsubmit' class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <span class="text-muted">&copy;2014 Abhinav</span>
+            <span class='pull-right'>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </span>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rsvp-latest.min.js"></script>
+    <script type="text/javascript">var Promise = RSVP.Promise;</script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/require.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
