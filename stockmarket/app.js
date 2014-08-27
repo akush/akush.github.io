@@ -8,21 +8,27 @@ require(['js/login_module', 'js/xhr_module'], function (login, xhr) {
             else
                 login.setSession(document.getElementById("inputUsername").value);
             console.log('submit');
-            window.location.reload();
+            showContainer(xhr);
         }
     } else {
         console.log('inside');
-        document.getElementById('container').style.display = 'block';
-        document.getElementById('chooseColumn').style.display = 'block';
-        document.getElementById('logout').style.display = 'block';
-        document.getElementById('logout').onclick = function() {
-            login.logoff();
-            window.location.reload();
-        }
-        getData(xhr);
+        showContainer(xhr);
+    }
+
+    document.getElementById('logout').onclick = function () {
+        login.logoff();
+        window.location.reload();
     }
 
 });
+
+function showContainer(xhr) {
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('container').style.display = 'block';
+    document.getElementById('chooseColumn').style.display = 'block';
+    document.getElementById('logout').style.display = 'block';
+    getData(xhr);
+}
 
 function toggleChooseColumn() {
     if (document.getElementById('chooseColumnDiv').style.display != 'none')
