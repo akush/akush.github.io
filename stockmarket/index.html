@@ -17,12 +17,44 @@
                 </button>
                 <a class="navbar-brand" href="#">Stock Market</a>
             </div>
+            <form class="navbar-form navbar-right">
+                <a href="#" class="btn btn-danger" id="logout" style="display:none">
+                    Logout
+                </a>
+            </form>
+            <form class="navbar-form navbar-right">
+                <a href="#" class="btn btn-success" id="chooseColumn" style="display:none" onclick="toggleChooseColumn()">
+                    <span class="glyphicon glyphicon-check"></span> Choose Columns
+                </a>
+            </form>
         </div>
     </div>
 
     <div class="container">
         <div id="container" style="padding: 0 15px;display:none;">
-            <table class="table table-condensed table-hover table-striped">
+            <div id="chooseColumnDiv" class="well well-sm" style="display:none;">
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <input type="checkbox" checked id="chooseserial" name="serial" onchange="showHideColumns(this.name, this.checked)">&nbsp;Serial
+                        </td>
+                        <td>
+                            <input type="checkbox" checked id="choosename" name="name" onchange="showHideColumns(this.name, this.checked)">&nbsp;Company Name
+                        </td>
+                        <td>
+                            <input type="checkbox" checked id="choosecode" name="code" onchange="showHideColumns(this.name, this.checked)">&nbsp;Company Code
+                        </td>
+                        <td>
+                            <input type="checkbox" checked id="chooseyest" name="yest" onchange="showHideColumns(this.name, this.checked)">&nbsp;Yesterday's price
+                        </td>
+                        <td>
+                            <input type="checkbox" checked id="chooseprice" name="price" onchange="showHideColumns(this.name, this.checked)">&nbsp;Today's price
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <table id="stocktable" class="table table-condensed table-hover table-striped">
                 <thead>
                     <tr>
                         <td class="serial">#</td>
@@ -96,7 +128,9 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/rsvp-latest.min.js"></script>
-    <script type="text/javascript">var Promise = RSVP.Promise;</script>
+    <script type="text/javascript">
+        var Promise = RSVP.Promise;
+    </script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/require.js"></script>
     <script src="app.js"></script>

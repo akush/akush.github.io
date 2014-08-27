@@ -24,9 +24,19 @@ define(['js/cookie_module'], function (cookie) {
         }
     }
 
+    function logoffUser() {
+        if(typeof(Storage) !== "undefined") {
+            sessionStorage.removeItem("user");
+            localStorage.removeItem("user");
+        } else {
+            cookie.erase("user");
+        }
+    }
+
     return {
         get: getUser,
         setRemember: setUserLocal,
-        setSession: setUserSession
+        setSession: setUserSession,
+        logoff: logoffUser
     }
 });
