@@ -2,7 +2,7 @@ define(['js/cookie_module'], function (cookie) {
 
     function getUser(){
         if(typeof(Storage) !== "undefined") {
-            return localStorage.getItem("user");
+            return localStorage.getItem("user") || sessionStorage.getItem("user");
         } else {
             return cookie.get("user");
         }
