@@ -33,7 +33,7 @@ akushApp.controller('GithubController', function($scope, $http) {
 
   $http.get("https://api.github.com/users/akush")
        .success(function (data) {
-          if (data.name == "") data.name = data.login;
+          if (data.name === "") data.name = data.login;
           $scope.user = data;
           $scope.loaded = true;
        })
