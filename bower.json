@@ -1,0 +1,20 @@
+{
+  "name": "akush.github.io",
+  "version": "0.0.1",
+  "homepage": "http://akush.github.io/",
+  "authors": [
+    "Abhinav Kushwaha <akush2007@gmail.com>"
+  ],
+  "main": "index.html",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
