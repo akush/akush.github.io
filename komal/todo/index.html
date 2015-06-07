@@ -70,8 +70,8 @@
             </center>
             <br/>
             <div id="tl" class="dec">
-                <div class="media" ng-repeat="todo in todoList.todos track by $i">
-                    <button class="btn  pull-right" ng-click="todoList.clearTodo($i)"><span class="glyphicon glyphicon-ok"></span>
+                <div class="media" ng-repeat="todo in todoList.todos track by $index">
+                    <button class="btn  pull-right" ng-click="todoList.clearTodo($index)"><span class="glyphicon glyphicon-ok"></span>
                     </button>
                     <div class="media-body">
                         <h3 class="media-heading">{{todo.todoitem }}<small><i>{{todo.time}}</i></small></h3>
