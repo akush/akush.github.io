@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ToDo List</title>
+
+    <style>
+    .display {
+        border-width: 10px;
+        border-color: white;
+        border-radius: 25px;
+        border-style: double;
+        padding: 2px;
+        height: 400px;
+        width: 300px;
+        background: #8AC007;
+        color: white;
+    }
+    #today,
+    #list {
+        overflow-y: auto;
+        color: white;
+    }
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+    .dec {
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%
+    }
+    </style>
+</head>
+
+<body ng-app="todoApp">
+    <br/>
+    <center><b style="color:#8AC007; font-size:50px;">To-Do List</b>
+    </center>
+    <br/>
+    <br/>
+
+    <div class="container" ng-controller="todoController as todoList" ng-init="todoList.load()">
+        <div id="form" class="col-md-3 col-md-offset-0.5 display">
+            <center>
+                <h2><b>Add Here</b></h2>
+            </center>
+            <br/>
+            <form role="form" class="center">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="i_title" name="itemtitle" value="" placeholder="title" ng-model="todoList.newText">
+                    <br/>
+                    <input type="text" class="form-control" id="i_desc" name="itemdesc" value="" placeholder="description" ng-model="todoList.newDesc">
+                    <br/>
+                    <input type="text" class="form-control" id="i_date" name="itemdate" value="" placeholder="date" ng-model="todoList.newTime">
+                    <br/>
+                    <button type="button" class="btn btn-default" value="Add" ng-click="todoList.add()">Add</button>
+                </div>
+            </form>
+        </div>
+        <div id="today" class="col-md-3 col-md-offset-1 display">
+            <center>
+                <h2><b>Today</b></h2>
+            </center>
+            <br/>
+            <div id="tl" class="dec">
+                <div class="media" ng-repeat="todo in todoList.todos track by $i">
+                    <button class="btn  pull-right" ng-click="todoList.clearTodo($i)"><span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                    <div class="media-body">
+                        <h3 class="media-heading">{{todo.todoitem }}<small><i>{{todo.time}}</i></small></h3>
+                        <p>{{todo.descp}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="list" class="col-md-3 col-md-offset-1 display">
+            <center>
+                <h2><b>To-do</b></h2>
+            </center>
+            <br/>
+            <div id="dl" class="dec">
+                <div class="media" ng-repeat="todo in todoList.todos track by $index">
+                    <button class="btn  pull-right" onclick="todoList.clearTodo($index)"><span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                    <div class="media-body">
+                        <h3 class="media-heading">{{todo.todoitem }}<small><i>{{todo.time}}</i></small></h3>
+                        <p>{{todo.descp}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
